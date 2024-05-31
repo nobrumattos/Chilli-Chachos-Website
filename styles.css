@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    background: linear-gradient(to right, #fdcb6e, #2c3e50, #e17055);
+    background-size: 1200% 1200%;
+    animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.2rem;
+    color: #ffffff;
+    margin: 20px 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+
+h1.hidden {
+    animation: waveOut 1s ease forwards;
+}
+
+@keyframes waveIn {
+    0% {
+        transform: translateY(-20px) skewX(-30deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px) skewX(10deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0) skewX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes waveOut {
+    0% {
+        transform: translateY(0) skewX(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-10px) skewX(10deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(20px) skewX(-30deg);
+        opacity: 0;
+    }
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 80vh;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out, border-radius 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.figure {
+    position: relative;
+    margin-top: 15px;
+    padding: 0;
+    display: inline-block;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.figure-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+figure:hover .figure-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+}
+
+p a {
+    display: block;
+    width: 100%;
+}
+
+p a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out, border-radius 0.3s ease-out, box-shadow 0.3s ease-out;
+    animation: waveIn 1s ease forwards;
+}
+
+p a:hover img {
+    transform: scale(1.05);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1200px) {
+    p a img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    p a img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    p a img {
+        width: 100%;
+    }
+}
+
+.comida {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    filter: grayscale(20%) contrast(130%);
+    width: 100%;
+}
+
+.h2 {
+    background-color: #1D1D1D;
+    text-align: center;
+    line-height: 3;
+    margin-top: 100px;
+}
+
+.h2 p {
+    font-size: 14px;
+    color: white;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.d-block.w-100 {
+    width: 366px !important;
+    height: 183px !important;
+    object-fit: cover;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #f3ef05;
+    color: #fff;
+    border-radius: 70%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background-color: #a18f27;
+   
+    
+}
+
+/* Aplica a animação constante à classe figure col-lg-3 */
+.figure.col-lg-3 {
+    animation: breatheAnimation 5s ease-in-out infinite; /* Aplica a animação constante */
+}
+
+/* Define a animação de respiração */
+@keyframes breatheAnimation {
+    0% {
+        transform: scale(1); /* Tamanho normal */
+    }
+    50% {
+        transform: scale(1.05); /* Tamanho um pouco maior */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho normal */
+    }
+}
+
+/* Estilos para telas maiores (notebooks e PCs) */
+@media (min-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .figure,
+    .figure.col-lg-3 {
+        margin: 0 auto;
+        flex-basis: 25%;
+    }
+
+    .carousel-inner,
+    .carousel.slide.my-3.rounded.pointer-event {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Largura do carrossel ocupando 100% do contêiner */
+        margin: 0 auto;
+    }
+
+    .carousel-caption,
+    .dynamicTitle,
+    h1,
+    p {
+        text-align: center;
+    }
+
+    .carousel-item img,
+    .comida {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        display: block; /* Para garantir que a imagem ocupe toda a largura */
+    }
+
+    .redes {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+.element {
+    transition: all 0.3s ease;
+}
+
+.scrollable {
+    overflow-scrolling: touch;
+}
+
+input[type="search"] {
+    appearance: none;
+}

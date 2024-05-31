@@ -1,0 +1,15 @@
+{
+  "name": "chilli-chachos---mobile",
+  "version": "1.0.0",
+  "description": "## Sumário - [Descrição](#Versão beta do site mobile do Chilli Chachos; Chilli Chachos V1.0) - [Instalação](#Descrita nos \"##passos\") - [Tecnologias](#HTML, CSS E JS) - [Contato](#brunomarinhomattoss@_gmail.com)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
