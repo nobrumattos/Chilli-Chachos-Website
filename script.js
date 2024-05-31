@@ -62,31 +62,3 @@ imagens.forEach(imagem => {
         Object.assign(imagem.style, estiloPadrao); // Retorna ao tamanho e estilo original ao retirar o mouse
     });
 });
-
-// Função para animar todos os elementos h1 com a classe "dynamicTitle"
-function animateTitles() {
-    const titles = document.querySelectorAll('.dynamicTitle');
-    let animationTime = 4000; // Tempo total da animação em milissegundos
-    let startY = -10; // Posição inicial no eixo Y
-    let startX = 0; // Posição inicial no eixo X
-    let endY = 10; // Posição final no eixo Y
-    let endX = 0; // Posição final no eixo X
-
-    titles.forEach(title => {
-        // Animação do título
-        setInterval(() => {
-            // Animação de entrada
-            title.style.transition = `transform ${animationTime / 2}ms ease-in-out`;
-            title.style.transform = `translate(${startX}px, ${startY}px)`;
-
-            // Animação de saída
-            setTimeout(() => {
-                title.style.transition = `transform ${animationTime / 2}ms ease-in-out`;
-                title.style.transform = `translate(${endX}px, ${endY}px)`;
-            }, animationTime / 2);
-        }, animationTime);
-    });
-}
-
-// Chama a função de animação quando a página carrega
-window.onload = animateTitles;
