@@ -1,10 +1,9 @@
 # Projeto Chilli Chachos (Mobile) 1.0
 
 ## Sumário
-- [Descrição](#Versão beta do site mobile do Chilli Chachos; Chilli Chachos V1.0)
-- [Instalação](#Descrita nos "##passos")
-- [Tecnologias](#HTML, CSS E JS)
-- [Contato](#brunomarinhomattoss@_gmail.com)
+- (#Versão beta do site mobile do Chilli Chachos; Chilli Chachos V1.0)
+  (#HTML, CSS E JS)
+- [Contato] - (#brunomarinhomattoss@_gmail.com)
 
 ## Descrição
 O Projeto Chilli Chachos (Mobile) 1.0 é um exemplo de um site responsivo para dispositivos móveis que oferece uma variedade de pratos e refeições. Ele foi desenvolvido utilizando HTML, CSS e JavaScript.
@@ -22,8 +21,8 @@ O Projeto Chilli Chachos (Mobile) 1.0 é um exemplo de um site responsivo para d
     ```sh
     cd Chilli-Chachos
     ```
-3. Abra o arquivo index.html em um navegador web.
-
+3. Abra o arquivo index.html com live server no vs code.
+   
 ## Uso
 O site pode ser acessado, por enquanto, apenas em dispositivos móveis. Ele oferece uma interface amigável para visualizar os pratos e refeições disponíveis, além de informações sobre cada item.
 
